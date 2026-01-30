@@ -1,3 +1,11 @@
+#!/bin/bash
+echo "🚀 Completing Day 2: Dockerizing Your DevOps Project"
+echo "=================================================="
+
+cd ~/Desktop/devops_project
+
+echo "1. Creating final README..."
+cat > README.md << 'README_EOF'
 # 🌐 Moroccan Website Monitor
 
 ## 🎯 Project Description
@@ -108,3 +116,80 @@ pip3 install requests
 # Run monitor
 python3 website_checker.py
 \`\`\`
+README_EOF
+
+echo "✅ README created!"
+
+echo "2. Creating LICENSE file..."
+cat > LICENSE << 'LICENSE_EOF'
+MIT License
+
+Copyright (c) 2024 Issam Farih
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+LICENSE_EOF
+
+echo "✅ LICENSE created!"
+
+echo "3. Creating .gitignore..."
+cat > .gitignore << 'GITIGNORE_EOF'
+__pycache__/
+*.pyc
+.DS_Store
+docker_results/
+GITIGNORE_EOF
+
+echo "✅ .gitignore created!"
+
+echo "4. Fixing docker-compose.yml..."
+cat > docker-compose.yml << 'COMPOSE_EOF'
+services:
+  website-monitor:
+    build: .
+    image: morocco-monitor:latest
+    container_name: morocco-devops-monitor
+    volumes:
+      - ./docker_results:/app/results
+    restart: "no"
+COMPOSE_EOF
+
+echo "✅ docker-compose.yml fixed!"
+
+echo "5. Committing to GitHub..."
+git add .
+git commit -m "Complete Day 2: Dockerized website monitor with professional documentation"
+git push origin main
+
+echo "✅ All changes pushed to GitHub!"
+
+echo ""
+echo "🎉 DAY 2 COMPLETE! 🎉"
+echo "====================="
+echo "Your DevOps project now includes:"
+echo "✅ Docker containerization"
+echo "✅ Docker Compose orchestration"
+echo "✅ Volume mounting for persistence"
+echo "✅ Professional README with badges"
+echo "✅ MIT License"
+echo "✅ Clean .gitignore"
+echo ""
+echo "🔗 GitHub Repository:"
+echo "https://github.com/I-FARIH/morocco-devops-monitor"
+echo ""
+echo "🚀 Ready for Day 3: Automation, Testing & CI/CD!"
