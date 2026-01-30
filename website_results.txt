@@ -1,0 +1,26 @@
+WEBSITE CHECK RESULTS
+==================================================
+Date: Sat Jan 24 16:37:49 2026
+==================================================
+
+https://www.aui.ma
+Status: UP
+Response time: 0.49s
+----------------------------------------
+https://www.hespress.com
+Status: UP
+Response time: 0.24s
+----------------------------------------
+https://www.avito.ma
+Status: DOWN
+----------------------------------------
+https://www.google.com
+Status: UP
+Response time: 0.33s
+----------------------------------------
+
+SUMMARY:
+Total checked: 4
+Up: 3
+Down: 1
+Errors: 0

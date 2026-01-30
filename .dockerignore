@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.github/
+.gitignore
+
+# Docker
+docker-compose.yml
+Dockerfile
+
+# Results - only exclude specific result files
+docker_results/
+website_results.txt
+
+# OS
+.DS_Store
+Thumbs.db

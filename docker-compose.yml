@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  website-monitor:
+    build: .
+    image: morocco-monitor:latest
+    container_name: morocco-devops-monitor
+    volumes:
+      - ./docker_results:/app/results  # Mount for persistent storage
+    command: python website_checker.py
+    restart: "no"
