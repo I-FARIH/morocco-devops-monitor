@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-02-02T20:19:31.343452",
+  "results": [
+    {
+      "name": "AUI Morocco",
+      "url": "https://www.aui.ma",
+      "status": "UP",
+      "code": 200,
+      "time": 0.48,
+      "timestamp": "20:19:30"
+    },
+    {
+      "name": "Hespress",
+      "url": "https://www.hespress.com",
+      "status": "UP",
+      "code": 200,
+      "time": 0.23,
+      "timestamp": "20:19:30"
+    },
+    {
+      "name": "Avito Morocco",
+      "url": "https://www.avito.ma",
+      "status": "DOWN",
+      "code": 403,
+      "time": 0.41,
+      "timestamp": "20:19:31"
+    },
+    {
+      "name": "Google",
+      "url": "https://www.google.com",
+      "status": "UP",
+      "code": 200,
+      "time": 0.26,
+      "timestamp": "20:19:31"
+    }
+  ]
+}

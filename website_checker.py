@@ -1,7 +1,7 @@
 import requests
 import time
-import os
 from datetime import datetime
+import os
 
 def check_website(url, name):
     """Check if a website is accessible"""
@@ -48,34 +48,37 @@ def main():
     print("\n" + "─" * 50)
     
     # Summary
-    total = len(websites)
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    
-    summary = f"📊 SUMMARY: {up_count}/{total} websites accessible"
-    print(summary)
-    print(f"⏰ Check time: {timestamp}")
+    print(f"📊 SUMMARY: {up_count}/{len(websites)} websites accessible")
+    print(f"⏰ Check time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("─" * 50)
     
-    # Save results to file
-    try:
-        # Ensure results directory exists
-        os.makedirs("results", exist_ok=True)
+    # Save to file - try Docker path first, then local
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    
+    # Try Docker path first
+    results_dir = "/app/results"
+    if not os.path.exists(results_dir):
+        # Fall back to local path
+        results_dir = "docker_results"
+    
+    os.makedirs(results_dir, exist_ok=True)
+    filename = f"{results_dir}/check_{timestamp}.txt"
+    
+    with open(filename, "w") as f:
+        f.write("\n" + "🔄" * 10 + "\n")
+        f.write("   MOROCCAN WEBSITE MONITOR\n")
+        f.write("🔄" * 10 + "\n\n")
         
-        filename = f"results/check_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
-        with open(filename, "w") as f:
-            f.write("MOROCCAN WEBSITE MONITOR - RESULTS\n")
-            f.write("=" * 50 + "\n")
-            f.write(f"Check performed at: {timestamp}\n")
-            f.write("-" * 50 + "\n")
-            for result in results:
-                f.write(result + "\n")
-            f.write("-" * 50 + "\n")
-            f.write(f"{summary}\n")
-            f.write("=" * 50 + "\n")
+        for status in results:
+            f.write(status + "\n")
         
-        print(f"💾 Results saved to: {filename}")
-    except Exception as e:
-        print(f"⚠️ Could not save results: {e}")
+        f.write("\n" + "─" * 50 + "\n")
+        f.write(f"📊 SUMMARY: {up_count}/{len(websites)} websites accessible\n")
+        f.write(f"⏰ Check time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write("─" * 50 + "\n")
+        f.write(f"💾 Results saved to: {filename}\n")
+    
+    print(f"💾 Results saved to: {filename}")
 
 if __name__ == "__main__":
     main()
