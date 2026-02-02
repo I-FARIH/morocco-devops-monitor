@@ -28,7 +28,8 @@ docker-compose up --build
 
 # Cloud deployment (automatically runs every 5 minutes)
 git add . && git commit -m "Update" && git push
-📁 Project Structure
+```
+## 📁 Project Structure
 morocco-devops-monitor/
 ├── website_checker_cloud.py    # Main Python script
 ├── Dockerfile                  # Docker configuration
@@ -36,12 +37,11 @@ morocco-devops-monitor/
 ├── requirements.txt            # Dependencies
 ├── manage-monitor.sh           # Management script
 └── cloud_results/              # JSON reports
-☁️ View Cloud Results
 
+## ☁️ View Cloud Results
 https://github.com/I-FARIH/morocco-devops-monitor
 
 👨‍💻 About
-
 Student: Issam Farih
 University: AUI Morocco
 Target: DevOps internships in Casablanca
