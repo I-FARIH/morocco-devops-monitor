@@ -42,6 +42,7 @@ morocco-devops-monitor/
 https://github.com/I-FARIH/morocco-devops-monitor
 
 👨‍💻 About
+
 Student: Issam Farih
 University: AUI Morocco
 Target: DevOps internships in Casablanca
