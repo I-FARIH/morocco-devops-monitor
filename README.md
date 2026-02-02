@@ -5,7 +5,7 @@ A cloud-based website monitoring system that checks 6 Moroccan/international web
 
 ## 📊 Features
 - ✅ Cloud monitoring with GitHub Actions
-- ✅ Runs every 5 minutes automatically  
+- ✅ Runs every 5 minutes automatically
 - ✅ Monitors 6 websites (AUI, Hespress, Avito, Google, LinkedIn, GitHub)
 - ✅ JSON reports with performance metrics
 - ✅ Docker container support
@@ -20,7 +20,6 @@ A cloud-based website monitoring system that checks 6 Moroccan/international web
 
 ## 🚀 Quick Start
 ```bash
-
 # Local testing
 python3 website_checker_cloud.py
 
@@ -29,22 +28,23 @@ docker-compose up --build
 
 # Cloud deployment (automatically runs every 5 minutes)
 git add . && git commit -m "Update" && git push
-
 📁 Project Structure
 morocco-devops-monitor/
 ├── website_checker_cloud.py    # Main Python script
 ├── Dockerfile                  # Docker configuration
-├── .github/workflows/monitor.yml  # GitHub Actions
+├── docker-compose.yml          # Docker orchestration
 ├── requirements.txt            # Dependencies
-└── cloud_results/              # JSON reports☁️ View Cloud Results
+├── manage-monitor.sh           # Management script
+└── cloud_results/              # JSON reports
+☁️ View Cloud Results
 
-https://github.com/I-FARIH/morocco-devops-monitor/actions
+https://github.com/I-FARIH/morocco-devops-monitor
 
 👨‍💻 About
 
 Student: Issam Farih
 University: AUI Morocco
 Target: DevOps internships in Casablanca
-Status: ✅ Operational in cloud
+Status: ✅ Operational locally, ready for cloud deployment
 
-Last updated: February 2025
+Last updated: February 2026
