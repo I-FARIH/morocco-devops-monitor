@@ -20,6 +20,7 @@ A cloud-based website monitoring system that checks 6 Moroccan/international web
 
 ## 🚀 Quick Start
 ```bash
+
 # Local testing
 python3 website_checker_cloud.py
 
@@ -27,7 +28,10 @@ python3 website_checker_cloud.py
 docker-compose up --build
 
 # Cloud deployment (automatically runs every 5 minutes)
-git add . && git commit -m "Update" && git push📁 Project Structuremorocco-devops-monitor/
+git add . && git commit -m "Update" && git push
+
+📁 Project Structure
+morocco-devops-monitor/
 ├── website_checker_cloud.py    # Main Python script
 ├── Dockerfile                  # Docker configuration
 ├── .github/workflows/monitor.yml  # GitHub Actions
@@ -43,4 +47,4 @@ University: AUI Morocco
 Target: DevOps internships in Casablanca
 Status: ✅ Operational in cloud
 
-Last updated: February 2024
+Last updated: February 2025
