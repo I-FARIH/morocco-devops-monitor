@@ -21,7 +21,7 @@ while true; do
         1)
             echo ""
             echo "Running website check..."
-            python3 website_checker_cloud.py
+            python3 advanced_monitor.py
             ;;
         2)
             echo ""

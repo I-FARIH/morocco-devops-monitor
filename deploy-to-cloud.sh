@@ -12,7 +12,7 @@ echo ""
 
 echo -e "${YELLOW}📋 Step 1: Testing locally...${NC}"
 echo ""
-python3 website_checker_cloud.py
+python3 advanced_monitor.py
 
 echo ""
 echo -e "${YELLOW}📦 Step 2: Preparing files for GitHub...${NC}"
