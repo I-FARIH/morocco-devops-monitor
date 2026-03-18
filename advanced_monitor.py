@@ -14,10 +14,15 @@ class MoroccoWebsiteMonitor:
             "LinkedIn": "https://www.linkedin.com",
             "GitHub": "https://github.com"
         }
-        self.results_dir = "cloud_results"
+        
+        if os.path.exists("/app/results"):
+             self.results_dir="/app/results"
+             else:
+                self.results_dir="cloud_results"
         os.makedirs(self.results_dir, exist_ok=True)
+
     
-    def check_website(self, name, url):
+        def check_website(self, name, url):
         """Enhanced website check with better error handling"""
         try:
             start = time.time()
@@ -130,14 +135,11 @@ class MoroccoWebsiteMonitor:
         print("📊 REPORT GENERATED")
         print("="*60)
         
-        up_count = sum(1 for r in results if r["status"] == "UP")
-        blocked_count = sum(1 for r in results if r["status"] == "BLOCKED")
-        total = len(results)
+        print(f"   ✅ UP:        {report['summary']['up']}/{report['summary']['total_websites']}")
+        print(f"   ⚠️  BLOCKED:  {report['summary']['blocked']}/{report['summary']['total_websites']}")
+        print(f"   ❌ DOWN:      {report['summary']['down']}/{report['summary']['total_websites']}")
         
-        print(f"\n📈 SUMMARY:")
-        print(f"   ✅ UP:        {up_count}/{total}")
-        print(f"   ⚠️  BLOCKED:  {blocked_count}/{total}")
-        print(f"   ❌ DOWN:      {total - up_count - blocked_count}/{total}")
+        
         print(f"\n📁 Results saved to: {filepath}")
         print("="*60)
         
