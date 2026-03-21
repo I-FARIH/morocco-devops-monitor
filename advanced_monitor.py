@@ -22,6 +22,14 @@ class MoroccoWebsiteMonitor:
             self.results_dir = "cloud_results"
         os.makedirs(self.results_dir, exist_ok=True)
 
+    def classify_status(self, status_code):
+    if status_code == 0:
+        return "DOWN"
+    elif status_code < 400:
+        return "UP"
+    else:
+        return "BLOCKED"
+
     def check_website(self, name, url):
         """Enhanced website check with better error handling"""
         try:
@@ -35,7 +43,7 @@ class MoroccoWebsiteMonitor:
             }
             response = requests.get(url, headers=headers, timeout=10)
             response_time = time.time() - start
-            status = "UP" if response.status_code < 400 else "BLOCKED"
+            status = self.classify_status(response.status_code)
             return {
                 "name": name,
                 "url": url,
