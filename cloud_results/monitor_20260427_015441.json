@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "project": "Morocco DevOps Monitor",
+    "version": "2.0",
+    "generated_at": "2026-04-27T01:54:41.494528",
+    "location": "GitHub Actions Cloud",
+    "student": "AUI Morocco - DevOps Learning"
+  },
+  "summary": {
+    "total_websites": 6,
+    "up": 6,
+    "blocked": 0,
+    "down": 0
+  },
+  "results": [
+    {
+      "name": "AUI Morocco",
+      "url": "https://www.aui.ma",
+      "status": "UP",
+      "code": 200,
+      "time": 1.52,
+      "timestamp": "01:54:39",
+      "size": 170598
+    },
+    {
+      "name": "Hespress",
+      "url": "https://www.hespress.com",
+      "status": "UP",
+      "code": 200,
+      "time": 0.13,
+      "timestamp": "01:54:39",
+      "size": 276286
+    },
+    {
+      "name": "Avito Morocco",
+      "url": "https://www.avito.ma",
+      "status": "UP",
+      "code": 200,
+      "time": 1.04,
+      "timestamp": "01:54:40",
+      "size": 272724
+    },
+    {
+      "name": "Google",
+      "url": "https://www.google.com",
+      "status": "UP",
+      "code": 200,
+      "time": 0.1,
+      "timestamp": "01:54:40",
+      "size": 196911
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com",
+      "status": "UP",
+      "code": 200,
+      "time": 0.27,
+      "timestamp": "01:54:41",
+      "size": 141667
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com",
+      "status": "UP",
+      "code": 200,
+      "time": 0.39,
+      "timestamp": "01:54:41",
+      "size": 565836
+    }
+  ]
+}
